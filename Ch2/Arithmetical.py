@@ -13,7 +13,8 @@ def main(Y, P, Perdiction=None):
     print(f"Average increment = {round(statistics.mean(Ka))}")
 
     if Perdiction:
-        Pop = P[-1] + Ka[-1] * (Perdiction - Y[-1])
+        # P = P0 + Kav * (t - t0)
+        Pop = P[-1] + round(statistics.mean(Ka)) * (Perdiction - Y[-1])
         print("The population in 2020 is: ", round(Pop, 2), "Captia.")
 
 
