@@ -13,11 +13,11 @@ def main(Y, P, Perdiction=None):
     print(f"Average increment = {round(statistics.mean(Ka))}")
 
     if Perdiction:
-        Pop = P[-1] + (Y[-1] - Y[0]) * statistics.mean(Ka)
+        Pop = P[-1] + Ka[-1] * (Perdiction - Y[-1])
         print("The population in 2020 is: ", round(Pop, 2), "Captia.")
 
 
 if __name__ == "__main__":
     YEARS = [1910, 1920, 1930, 1940, 1950, 1960, 1970]
     POPULATION = [45000, 60000, 87000, 116000, 129000, 145000, 165000]
-    main(YEARS, POPULATION, Perdiction=True)
+    main(YEARS, POPULATION, Perdiction=2020)
