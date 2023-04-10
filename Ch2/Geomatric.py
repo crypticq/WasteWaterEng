@@ -3,7 +3,7 @@ import math
 
 
 
-def main(Y, P, Perdiction=None):
+def main(Y, P, Perdiction=None,):
     log = lambda x: math.log(x)
     r = lambda x: round(x)
     l_pop = [log(i) for i in P]
@@ -15,10 +15,10 @@ def main(Y, P, Perdiction=None):
     Kg = statistics.mean(Kg)
     
     if Perdiction:
-        
-        Perdiction = l_pop[-1] + (Kg) * (Perdiction - Y[-1])
-        Perdiction = math.exp(Perdiction)
-        print(f"Perdiction for {Perdiction} is {r(Perdiction)}")
+        year = Perdiction
+        z = l_pop[-1] + (Kg) * (Perdiction - Y[-1])
+        x = math.exp(z)
+        print(f"Perdiction for {year} is {r(x)}")
 
 
     
