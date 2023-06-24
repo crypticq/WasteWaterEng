@@ -33,8 +33,6 @@ def volume_of_sol_tank(discahrge: int, dose: int, tanks: int, hours) -> float:
     print(f"rate of dosing is {rate_of_dosing} m3/hr")
     print(f"rate of dosing is {(rate_of_dosing_sec)} L/sec")
 
-    return volume_of_tank
-
 
 def design_tank(discharge: int, retention_time, dose: int, depth: int) -> float:
     print("Calculating retention time")
